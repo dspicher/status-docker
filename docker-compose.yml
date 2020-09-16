@@ -4,3 +4,10 @@ services:
         build: .
         ports:
           - "8545:8545"
+        restart: always
+        logging:
+            driver: 'json-file'
+            options:
+                max-file: '3'
+                max-size: '1g'
+                compress: 'true'
