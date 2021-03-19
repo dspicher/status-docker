@@ -1,0 +1,30 @@
+{
+  "NoDiscovery": false,
+  "AdvertiseAddr": "your IP",
+  "ListenAddr": "0.0.0.0:30303",
+  "HTTPEnabled": true,
+  "HTTPHost": "0.0.0.0",
+  "HTTPPort": 8545,
+  "APIModules": "shh,web3,admin,mailserver",
+  "IPCEnabled": true,
+  "RegisterTopics": ["whispermail"],
+  "WhisperConfig": {
+      "Enabled": true
+  },
+  "WakuConfig": {
+    "Enabled": true,
+    "EnableMailServer": true,
+    "MailServerPassword": "status-offline-inbox",
+    "MailServerDataRetention": 15
+  },
+  "ClusterConfig": {
+    "Enabled": true,
+    "Fleet": "eth.prod",
+    "BootNodes": [
+      "enode://345ert345ert@23.45.67.89:30404"
+    ]
+  },
+  "BridgeConfig": {
+    "Enabled": true
+  }
+}

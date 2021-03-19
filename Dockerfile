@@ -6,8 +6,7 @@ RUN apt-get update -q && \
 RUN git clone https://github.com/status-im/status-go
 
 WORKDIR status-go
+COPY whisper_config.json .
 RUN make statusgo
 
-RUN sed -i 's/localhost/0.0.0.0/'  _examples/whisper.json
-
-CMD ./build/bin/statusd -c _examples/whisper.json
+CMD ./build/bin/statusd -c whisper_config.json
