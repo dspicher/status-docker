@@ -6,6 +6,7 @@ RUN apt-get update -q && \
 RUN git clone https://github.com/status-im/status-go
 
 WORKDIR status-go
+RUN git checkout 730f540a
 COPY whisper_config.json .
 RUN make statusgo
 
